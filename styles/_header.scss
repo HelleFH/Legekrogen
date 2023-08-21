@@ -1,0 +1,54 @@
+.header-shipping-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.2em;
+    justify-content: center;
+    background-color: #D7E6EC;
+    font-weight: 500;
+}
+
+.header-shipping-bar p {
+
+    color: #355674;
+    text-align: center;
+    font-size: 10px;
+    padding-left:0.5em;
+}
+
+.fa-truck {
+    color: #355674;
+    font-size: 10px;
+
+}
+
+.header-navbar {
+    padding: 0;
+    background-color: #355674;
+    z-index: 9998;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2em;
+    padding-right: 5em;
+    ;
+}
+
+.header-logo {
+    width: 114px;
+    height: 46px;
+}
+
+.header-navbar ul {
+    list-style: none;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+
+}
+
+.header-navbar ul li {
+    color: rgb(255, 255, 255, 0.7);
+    padding-left: 2em;
+}

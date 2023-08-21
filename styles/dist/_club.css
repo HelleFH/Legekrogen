@@ -1,0 +1,75 @@
+#club-form {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  grid-row: 2;
+  grid-column: 2;
+  padding-top: 2em;
+}
+
+.club-form {
+  width: 100%;
+  position: relative;
+  background-image: url("../images/heros/produkter.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 15em;
+  padding-bottom: 10em;
+  z-index: 1;
+}
+
+.club-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(53, 86, 116, 0.6980392157);
+  z-index: -1;
+}
+
+.club-form-header {
+  text-align: center;
+  z-index: 9999;
+  grid-row: 1;
+  grid-column: 1/span 3;
+}
+
+.form-input {
+  display: flex;
+  width: 100%;
+  padding: 1em 0 1em 1.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border: solid rgba(255, 255, 255, 0.7) 1px;
+  background-color: transparent;
+  border-radius: 1.5em;
+  align-items: center;
+}
+
+.form-input::placeholder {
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#message {
+  min-height: 180px;
+}
+
+.club-form-button button {
+  width: 100%;
+  background-color: #9478A7;
+  color: white;
+  border-radius: 1.5em;
+  border: none;
+  padding: 1em;
+  margin-top: 1.5em;
+}
