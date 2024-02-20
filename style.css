@@ -40,6 +40,26 @@ h4 {
   font-weight: 200;
 }
 
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
 button p {
   text-transform: uppercase;
   font-size: 14px;
@@ -53,16 +73,19 @@ button p {
   padding: 0.2em;
   justify-content: center;
   background-color: #D7E6EC;
+  font-weight: 500;
 }
 
 .header-shipping-bar p {
   color: #355674;
   text-align: center;
   font-size: 10px;
+  padding-left: 0.5em;
 }
 
-.fa-solid {
+.fa-truck {
   color: #355674;
+  font-size: 10px;
 }
 
 .header-navbar {
@@ -81,7 +104,7 @@ button p {
   height: 46px;
 }
 
-.header-navbar ul {
+.menu {
   list-style: none;
   z-index: 9999;
   display: flex;
@@ -89,9 +112,14 @@ button p {
   font-size: 18px;
 }
 
-.header-navbar ul li {
+.menu li {
   color: rgba(255, 255, 255, 0.7);
   padding-left: 2em;
+  text-decoration: none;
+}
+
+.menu li a {
+  text-decoration: none;
 }
 
 .hero {
@@ -117,6 +145,7 @@ button p {
   width: 100%;
   bottom: 0;
   /* Shift the image upwards */
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -232,7 +261,8 @@ button p {
   padding: 5em 0 5em;
 }
 
-.reviews-header h2, .reviews-header h3 {
+.reviews-header h2,
+.reviews-header h3 {
   text-align: center;
   color: #355674 !important;
 }
@@ -265,7 +295,7 @@ button p {
 
 .review-cards-item {
   max-width: 426px;
-  background-color: #D7E6EC4D;
+  background-color: rgba(215, 230, 236, 0.3019607843);
   border-radius: 1em;
   padding: 4em 2.5em 5em 2.5em;
   max-width: 426px;
@@ -327,9 +357,16 @@ button p {
   align-items: center;
 }
 
+.form-input::-moz-placeholder {
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .form-input::placeholder {
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 #message {
@@ -348,6 +385,10 @@ button p {
 
 footer {
   background-color: #355674;
+
+}
+
+.footer-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 7em 7% 7em 7%;
@@ -393,9 +434,93 @@ footer {
 .footer-logo {
   max-width: 184px;
   justify-self: flex-end;
-  max-height: 74px;
+    max-height: 74px;
 }
 
 .instagram-logo {
   grid-column: 2;
+}
+
+@media (max-width: 600px) {
+
+  .menu {
+    display: none;
+  }
+
+  .menu.open {
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    padding-right: 2em;
+    width: 50vw;
+    background-color: #355674;
+    margin-top: 1em;
+    position: absolute;
+    border-radius: 4px;
+
+  }
+
+  .menu.open li {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .bar {
+    transition: transform 0.4s;
+  }
+
+  .bar:first-child {
+    transform-origin: top left;
+  }
+
+  .bar:last-child {
+    transform-origin: bottom left;
+  }
+
+  .open .bar:first-child {
+    transform: rotate(45deg);
+  }
+
+  .open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .open .bar:last-child {
+    transform: rotate(-45deg);
+  }
+
+  #club-form {
+    width: 80vw;
+  }
+
+  footer {
+    background-color: #355674;
+
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em 3% 2em 3%;
+  }
+
+
+
+  .footer-logo {
+    grid-column: 1/span 2;
+    grid-row: 1;
+    margin: 0 auto;
+  }
+
+  .instagram-logo {
+    grid-column: 2;
+  }
 }

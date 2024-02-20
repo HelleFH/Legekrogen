@@ -8,14 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Square+Peg&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-
-
-
-    <link rel="stylesheet" href="dist/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Square+Peg&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -24,20 +19,27 @@
     <div id="wrapper">
         <div class="page-content">
             <header>
-                <div class="header-shipping-bar">
-                    <i class="fa-solid fa-truck"></i>  <p>Fri fragt ved køb over 499,-</p>
-                </div>
+                <nav>
+                    <div class="header-shipping-bar">
+                        <i class="fa-solid fa-truck"></i>
+                        <p>Fri fragt ved køb over 499,-</p>
+                    </div>
+                </nav>
                 <div class="header-navbar">
                     <div class="header-logo"><img src="images/logo/legekrogen_logo.png"> </div>
                     <nav>
-                        <ul>
-                            <li><a id="legetøj">
-                                    Legetøj</a></li>
-                            <li><a id="Udtalelser">Udtalelser</a></li>
-                            <li><a id="kundeklub">Kundeklub</a></li>
-
-                        </ul>
+                        <ul class="menu">
+                            <li><a href="#">Legetøj</a></li>
+                            <li><a href="#">Udtalelser</a></li>
+                            <li><a href="#">Kundeklub</a></li>
+                          </ul>
                     </nav>
+                    <div class="burger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                      </div>
+                    </div>
                 </div>
             </header>
             <style>
@@ -50,7 +52,9 @@
                         <p>At lege er at leve</p>
                         <p>Her hos os har vi et stort udvalg af legetøj i høj kvalitet</p>
                     </div>
-                    <button class="hero-button"><p>Læs mere</p> <i class="fa-solid fa-chevron-right fa-2xs"></i></button>
+                    <button class="hero-button">
+                        <p>Læs mere</p> <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                    </button>
                 </div>
             </div>
             <section class="products">
@@ -108,7 +112,9 @@
                         </div>
                     </div>
                 </div>
-                <button class="products-button"><p>Gå til legetøj</p> <i class="fa-solid fa-chevron-right fa-2xs"></i></button>
+                <button class="products-button">
+                    <p>Gå til legetøj</p> <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                </button>
 
 
             </section>
@@ -168,11 +174,14 @@
                     </div>
 
                     <div class="club-form-row club-form-button">
-                        <button type="submit" value="Bliv medlem nu!"><p>Bliv medlem nu!</p></button>
+                        <button type="submit" value="Bliv medlem nu!">
+                            <p>Bliv medlem nu!</p>
+                        </button>
                     </div>
                 </form>
             </section>
             <footer>
+                <div class="footer-content">
                 <div class="footer-text">
                     <p>Kundeservice</p>
                     <p><i class="fa-regular fa-envelope"></i>kontakt@legehjørnet.dk</p>
@@ -186,10 +195,11 @@
 
                 </div>
                 <div class="footer-logo"><img src="images/logo/legekrogen_logo.png"></div>
+            </div>
             </footer>
 
             <style>
-                
+
             </style>
             <script>document.querySelector("#club-form").addEventListener("submit", function (event) {
                     event.preventDefault(); // Prevent form submission
@@ -246,7 +256,18 @@
 
                     window.location.href = window.location.href;
                 });
+
             </script>
+              <script>document.addEventListener('DOMContentLoaded', function() {
+                const burgerMenu = document.querySelector('.burger-menu');
+                const menu = document.querySelector('.menu');
+              
+                burgerMenu.addEventListener('click', function() {
+                  this.classList.toggle('open');
+                  menu.classList.toggle('open');
+                });
+              });
+              </script>
         </div>
     </div>
 </body>
